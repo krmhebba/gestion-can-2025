@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AfriCAN Manager</title>
+
+    <link rel="icon" href="logo.png" type="image/png">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Cairo:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.29/jspdf.plugin.autotable.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dashboard-body">
+    <div class="sidebar">
+        <div class="logo-details">
+            <img src="logo.png" alt="Logo" class="icon logo-img">
+            <div class="logo_name">AfriCAN</div>
+            <i class="fa-solid fa-bars" id="btn-menu"></i>
+        </div>
+        <ul class="nav-list">
+            <li><a href="#" class="active" onclick="app.router('home')"><i class="fa-solid fa-chart-pie"></i><span
+                        class="links_name" data-i18n="navDash">Tableau de bord</span></a></li>
+            <li><a href="#" onclick="app.router('stades')"><i class="fa-solid fa-building"></i><span class="links_name"
+                        data-i18n="navStades">Stades</span></a></li>
+            <li><a href="#" onclick="app.router('equipes')"><i class="fa-solid fa-flag"></i><span class="links_name"
+                        data-i18n="navEquipes">Équipes</span></a></li>
+            <li><a href="#" onclick="app.router('joueurs')"><i class="fa-solid fa-users"></i><span class="links_name"
+                        data-i18n="navJoueurs">Joueurs</span></a></li>
+            <li><a href="#" onclick="app.router('matchs')"><i class="fa-regular fa-futbol"></i><span class="links_name"
+                        data-i18n="navMatchs">Matchs</span></a></li>
+            <li><a href="#" onclick="app.router('billets')"><i class="fa-solid fa-ticket"></i><span class="links_name"
+                        data-i18n="navBillets">Billetterie</span></a></li>
+            <li class="profile">
+                <div class="profile-details">
+                    <div class="name_job">
+                        <div class="name" id="user-name">User</div>
+                        <div class="job" id="user-role">Role</div>
+                    </div>
+                </div>
+                <i class="fa-solid fa-right-from-bracket" id="log_out"></i>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <div class="top-nav">
+            <div class="text" data-i18n="navDash">Tableau de bord</div>
+            <div style="display:flex; align-items:center;">
+                <i class="fa-solid fa-moon theme-switch" id="theme-btn"></i>
+                <div class="lang-switch-dash">
+                    <span onclick="app.setLang('fr')" id="d-btn-fr">FR</span>
+                    <span onclick="app.setLang('ar')" id="d-btn-ar">AR</span>
+                    <span onclick="app.setLang('en')" id="d-btn-en">EN</span>
+                </div>
+            </div>
+        </div>
+        <div class="main-content" id="main-container"></div>
+    </section>
+    <script src="data.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+
+</html>

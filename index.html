@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AfriCAN Manager</title>
+
+    <link rel="icon" href="logo.png" type="image/png">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Cairo:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="login-body">
+    <div class="lang-switch">
+        <span onclick="changeLanguage('fr')" id="btn-fr" class="active">FR</span>
+        <span onclick="changeLanguage('ar')" id="btn-ar">AR</span>
+        <span onclick="changeLanguage('en')" id="btn-en">EN</span>
+    </div>
+    <div class="login-container">
+        <div class="form-box">
+            <div class="header-logo">
+                <img src="logo.png" alt="Logo" style="width: 120px; margin-bottom: 15px;">
+                <h1 data-i18n="appTitle">Afri<span>CAN</span> Manager</h1>
+                <p data-i18n="appSubtitle">Maroc 2025</p>
+            </div>
+            <form id="loginForm">
+                <div class="input-box">
+                    <input type="email" id="email" required placeholder=" ">
+                    <label data-i18n="labelEmail">Email</label>
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" id="password" required placeholder=" ">
+                    <label data-i18n="labelPass">Mot de passe</label>
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <div class="input-box">
+                    <button type="submit" class="btn" data-i18n="btnConnect">Se connecter</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="auth.js"></script>
+</body>
+
+</html>

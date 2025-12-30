@@ -18,5 +18,5 @@ L'objectif était de maîtriser les fondamentaux du web : manipulation du DOM, g
 * **Bibliothèque Graphique :** Chart.js
 * **Outils :** Visual Studio Code, Git
 
-### Auteur
+## Auteur
 Projet réalisé par Hiba Karam - Élève Ingénieure @ EMSI.
